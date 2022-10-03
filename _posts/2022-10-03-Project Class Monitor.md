@@ -5,5 +5,5 @@ Saw this tweet by Vitalik
 <br>
 You know the phrase that "To a man with a hammer, everything looks like a nail". This is exactly what I am going to do here. I am a data scientist by profession so that is my hammer. 
 We will call our solution "Project Class Monitor". 
-
->Class Monitor - An designation extented by the school system authority to the student body which offically holds no power but is annoying anyway (read snitch)
+<br>
+>Class Monitor - An designation extented by the school authority to the student body which offically holds no power but is annoying anyway
