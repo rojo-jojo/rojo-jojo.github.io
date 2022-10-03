@@ -5,7 +5,7 @@ I have some background in data analysis and machine learning. Not much on the de
 <br>
 I'll start with writing code to create a pipeline where I get to a stage where my data is ready to just call model.fit() on a varity of sklearn models. Data representation is what matters here. I have no idea about how to thing about representation for running text data through an algorithm that can only handle 2-D tabular data. Let's google things.
 
-This article is a good practical summary - [Click Here](https://stackabuse.com/text-classification-with-python-and-scikit-learn/)
+This article is a good practical summary - [Click Here](https://medium.com/analytics-vidhya/text-cleaning-in-natural-language-processing-nlp-bea2c27035a6)
 <br>
 
 This is what our ML journey is looking like
@@ -17,3 +17,5 @@ This is what our ML journey is looking like
 2. Strategies to convert our data from text to numeric so that our ML model can train on it
 	- Bag of words
 	- Word embeddings
+
+

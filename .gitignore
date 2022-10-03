@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 vendor
 commit.ps1
+update-site.sh
+_drafts
