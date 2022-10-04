@@ -51,6 +51,9 @@ In a nutshell the goal of both of these techniques is to reduce a devirational w
 > car, cars, car's, cars' --> car
 <br>
 [Read more about these here](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
+<br>
+
+
 
 
 
