@@ -6,7 +6,7 @@ There is some kind of operation done on the text to convert it to numeric
 
 > T ---> f(T) ---> N
 
-*T is a text. f is an operation we apply on T which results in N,a numeric type or to simplify a number. *
+_T is a text. f is an operation we apply on T which results in N,a numeric type or to simplify a number. _
 <br>
 You might ask what exactly is this f and what is it doing. If you ever come across names like bag of words, tfidf, word embeddings, then know that you are looking at an "f". They convert text to numeric form but what's special about them is that make meaningful conversions.
 
