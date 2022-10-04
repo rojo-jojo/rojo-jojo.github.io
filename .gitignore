@@ -5,4 +5,3 @@ _site
 vendor
 commit.ps1
 update-site.sh
-_drafts
