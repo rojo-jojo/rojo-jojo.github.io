@@ -36,15 +36,16 @@ You might ask what exactly is this f and what is it doing. If you ever come acro
 Before going into the encoding or numerification of the text, let us understand few other important concepts in text pre-processing which could be useful later.
 <br>
 **Tokenization**
+<br>
 Tokenization is breaking raw text into words, sentences called tokens. This tokenization helps the machine learning algorithm in interpreting the meaning of the text by analyzing the
 sequence. There are different methods of tokenizing the data which can affect the performance of your algorithm. There is a blog link somewhere down there which can help you understand them better. A quick example to understand tokenization
 > Text - "ML is over-rated . But it pays well."<br>
 > Word tokenized form - ['ML','is','over-rated','.','But','it','pays','well.']<br>
 > Sentence tokenized form - ['Ml is over-rated', 'But it pays well']<br>
+<br>
 
+**Lemetization**<br>
 
-
-**Lemetization**
 
 
 [Read more here](https://towardsdatascience.com/tokenization-for-natural-language-processing-a179a891bad4)
