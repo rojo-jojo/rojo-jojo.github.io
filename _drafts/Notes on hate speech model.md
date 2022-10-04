@@ -52,7 +52,7 @@ In a nutshell the goal of both of these techniques is to reduce a devirational w
 <br>
 [Read more about these here](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
 <br>
-
+I am not trying that stemming thing. That shit looks unstable to me. I don't know how it even works. I'll just stick to some lemmatization on my project.
 
 
 
