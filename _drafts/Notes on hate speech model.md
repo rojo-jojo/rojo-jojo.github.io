@@ -42,14 +42,19 @@ sequence. There are different methods of tokenizing the data which can affect th
 > Text - "ML is over-rated . But it pays well."<br>
 > Word tokenized form - ['ML','is','over-rated','.','But','it','pays','well.']<br>
 > Sentence tokenized form - ['Ml is over-rated', 'But it pays well']<br>
+[More on tokenization techniques](https://towardsdatascience.com/tokenization-for-natural-language-processing-a179a891bad4)<br>
+[Implementing with NLTK in python](https://www.nltk.org/api/nltk.tokenize.html)
 <br>
 
-**Lemetization**<br>
+**Stemming and Lemmatization**<br>
+In a nutshell the goal of both of these techniques is to reduce a devirational word to a common base form. <br>
+> car, cars, car's, cars' --> car
+<br>
+[Read more about these here](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
 
 
 
-[Read more here](https://towardsdatascience.com/tokenization-for-natural-language-processing-a179a891bad4)
-[Tokenizing techniques with NLTK in python](https://www.nltk.org/api/nltk.tokenize.html)
+
 
 
 
