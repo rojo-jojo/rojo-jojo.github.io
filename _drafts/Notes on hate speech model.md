@@ -5,7 +5,7 @@ I have some background in data analysis and machine learning. Not much on the de
 <br>
 I'll start with writing code to create a pipeline where I get to a stage where my data is ready to just call model.fit() on a varity of sklearn models. Data representation is what matters here. I have no idea about how to thing about representation for running text data through an algorithm that can only handle 2-D tabular data. Let's google things.
 
-This article is a good practical summary - [Click Here](https://medium.com/analytics-vidhya/text-cleaning-in-natural-language-processing-nlp-bea2c27035a6)
+This article is a good practical summary - [Click Here](https://stackabuse.com/text-classification-with-python-and-scikit-learn/)
 <br>
 
 This is what our ML journey is looking like
@@ -17,5 +17,22 @@ This is what our ML journey is looking like
 2. Strategies to convert our data from text to numeric so that our ML model can train on it
 	- Bag of words
 	- Word embeddings
+
+## Data cleaning and standardization
+The actual development we are going to do for the pre-processing is quite simple. So we can give more time for some fundamentals.
+
+**Why do data-cleaning in text analytics?**
+A machine learning model is a mathematical function i.e. it takes a vector of inputs, does some computations and gives a value as output. Since we mentioned mathematical, we have to understand that the input our algorithm will accept only numerical values. How does that work?
+There is some kind of operation done on the text to convert it to numeric
+
+> T ---> f(T) ---> N
+
+*T is a text. f is an operation we apply on T which results in N,a numeric type or to simplify a number.*
+<br><br>
+You might ask what exactly is this f and what is it doing. If you ever come across names like bag of words, tfidf, word embeddings, then know that you are looking at an "f". They convert text to numeric form but what's special about them is that make meaningful conversions. You can also refer this process of applying a function f as *encoding* the text to numeric.
+
+> If you are familar with label encoding from feature engineering in ML then the concept here is similar just extrapolated.
+
+
 
 
