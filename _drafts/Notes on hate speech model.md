@@ -42,7 +42,7 @@ In a nutshell the goal of both of these techniques is to reduce a devirational w
 I am not trying that stemming thing. That shit looks unstable to me. I don't know how it even works. I'll just stick to some lemmatization on my project.<br>
 We will skip the cleaning part of removing spaces, special characters etc. You can see the preprocessing.py for the actual steps there. Let's move on to representation.
 <br>
-**Bag of words representation**
+<b>Bag of words representation</b>
 <br>
 Some definitions first<br>
  - A document is an individual peice of text on which you want to do an ML operation. Think of a document as similar to a row in tabular data. It represents a single record.
