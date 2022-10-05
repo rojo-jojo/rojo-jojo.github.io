@@ -52,7 +52,7 @@ Some definitions first<br>
  - A corpus is the collection of all documents (document is to corpus what row is to a table)
 BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.
 <br>
-**BOW Algorithm**
+<b>BOW Algorithm</b>
 <br>
 
 1. Find all unqiue tokens in your corpus(words for us)
@@ -60,7 +60,7 @@ BOW is an algorithm that we will implement on our documents in the corpus, that 
 3. Take every document and replace words in it with the count of occurrences calculated in step two (see bagofwords.py for my implementation from scratch)
 
 <br>
-**Why do data-cleaning in text analytics?**
+<b>Why do data-cleaning in text analytics?</b>
 A machine learning model is a mathematical function i.e. it takes a vector of inputs, does some computations and gives a value as output. Since we mentioned mathematical, we have to understand that the input our algorithm will accept only numerical values. How does that work?
 We perform an operation on the text to convert it to numeric. Below is math like equation to make things more dificult for you
 
