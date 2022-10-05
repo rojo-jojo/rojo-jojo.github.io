@@ -43,12 +43,12 @@ We will skip the cleaning part of removing spaces, special characters etc. You c
 <br>
 **Bag of words(BOW) representation**
 <br>
-Some definitions first
+Some definitions first<br>
  - A document is an individual peice of text on which you want to do an ML operation. Think of a document as similar to a row in tabular data. It represents a single record.
  - A corpus is the collection of all documents (document is to corpus what row is to a table)
 BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.
 <br>
-**BOW Algorithm**
+**BOW Algorithm**<br>
 1. Find all unqiue tokens in your corpus(words for us)
 2. For each word get the count of occurrences of it
 3. Take every document and replace words in it with the count of occurrences calculated in step two (see bagofwords.py for my implementation from scratch)
