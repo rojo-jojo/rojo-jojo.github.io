@@ -40,10 +40,18 @@ In a nutshell the goal of both of these techniques is to reduce a devirational w
 <br>
 I am not trying that stemming thing. That shit looks unstable to me. I don't know how it even works. I'll just stick to some lemmatization on my project.<br>
 We will skip the cleaning part of removing spaces, special characters etc. You can see the preprocessing.py for the actual steps there. Let's move on to representation.
-
+<br>
 **Bag of words(BOW) representation**
+<br>
 Some definitions first
- - A document is an individual peice of text on which you want to do an ML operation. Think of a document as similar to a row in tabular data. It represents a 
+ - A document is an individual peice of text on which you want to do an ML operation. Think of a document as similar to a row in tabular data. It represents a single record.
+ - A corpus is the collection of all documents (document is to corpus what row is to a table)
+BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.
+<br>
+**BOW Algorithm**
+1. Find all unqiue tokens in your corpus(words for us)
+2. For each word get the count of occurrences of it
+3. Take every document and replace words in it with the count of occurrences calculated in step two (see bagofwords.py for my implementation from scratch)
 
 <br>
 **Why do data-cleaning in text analytics?**
