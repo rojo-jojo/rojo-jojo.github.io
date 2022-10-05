@@ -48,7 +48,8 @@ Some definitions first<br>
  - A corpus is the collection of all documents (document is to corpus what row is to a table)
 BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.
 <br>
-**BOW Algorithm**<br>
+**BOW Algorithm**
+<br>
 
 1. Find all unqiue tokens in your corpus(words for us)
 2. For each word get the count of occurrences of it
