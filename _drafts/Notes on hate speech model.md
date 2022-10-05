@@ -32,11 +32,12 @@ sequence. There are different methods of tokenizing the data which can affect th
 [Implementing with NLTK in python](https://www.nltk.org/api/nltk.tokenize.html)
 <br>
 
-**Stemming and Lemmatization**<br>
+**Stemming and Lemmatization**
+<br>
 In a nutshell the goal of both of these techniques is to reduce a devirational word to a common base form. <br>
 > car, cars, car's, cars' --> car
 <br>
-[More on lemmatization and stemming](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
+<a href="https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html">More on lemmatization and stemming </a>
 <br>
 I am not trying that stemming thing. That shit looks unstable to me. I don't know how it even works. I'll just stick to some lemmatization on my project.<br>
 We will skip the cleaning part of removing spaces, special characters etc. You can see the preprocessing.py for the actual steps there. Let's move on to representation.
