@@ -5,6 +5,7 @@ We will call our solution <em>Class Monitor Project</em>.
 <br>
 >Class Monitor - An designation extented by the school authority to a class room which offically holds no power but is annoying anyway
 <br>
+
 ## Plan
 Detecting offensive/hate tweets on twitter is not a novel idea. In fact I saw this an year ago on a competitive data science challenge. I will leverage some of their data for training to see how it fares. ML will be a very small part of our project. What I am interest in is building a complete system. I intend to keep it simple at first and then in different phases over-engineer it to the level of a fancy university project which kids can copy and get a C minus grade. I haven't thought through the whole thing but here is my idea for phase I
 
