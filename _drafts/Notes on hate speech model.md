@@ -61,6 +61,7 @@ BOW is an algorithm that we will implement on our documents in the corpus, that 
 
 <br>
 <b>Why do data-cleaning in text analytics?</b>
+<br>
 A machine learning model is a mathematical function i.e. it takes a vector of inputs, does some computations and gives a value as output. Since we mentioned mathematical, we have to understand that the input our algorithm will accept only numerical values. How does that work?
 We perform an operation on the text to convert it to numeric. Below is math like equation to make things more dificult for you
 
