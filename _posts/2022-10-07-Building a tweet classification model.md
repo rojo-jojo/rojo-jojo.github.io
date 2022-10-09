@@ -76,13 +76,14 @@ Some definitions before we move on to Bag Of Words<br>
 - Document: A document is an individual peice of text on which you want to do an ML operation. Think of a document as similar to a row in tabular data. It represents a single record.
 
 - Corpus: A corpus is the collection of all documents (document is to corpus what row is to a table)
+
 <br>
+
 ## Bag Of Words
 <br>
-BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.
-<br>
+BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.<br>
+
 <b>BOW Algorithm</b>
-<br>
 
 1. Find all unqiue tokens in your corpus(words for us)
 2. For each word get the count of occurrences of it
