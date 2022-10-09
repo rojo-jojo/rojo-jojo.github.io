@@ -22,4 +22,4 @@ Detecting offensive/hate tweets on twitter is not a novel idea. In fact I saw th
 <br><br>
 Read further here
 <br>
-<a href = "https://rojo-jojo.github.io/2022/10/07/1.-Building-a-tweet-classification-model.html"> 1. Building a tweet classification model using NLP </a>
+<a href = "https://rojo-jojo.github.io/2022/10/07/Building-a-tweet-classification-model.html"> 1. Building a tweet classification model using NLP </a>
