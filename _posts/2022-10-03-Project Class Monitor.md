@@ -18,3 +18,8 @@ Detecting offensive/hate tweets on twitter is not a novel idea. In fact I saw th
 	- Tweet is saved in a local DB
 	- ML API is called to get tweet classification
 	- Classification response is send to the front-end and saved in the local DB
+
+<br><br>
+Read further here
+<br>
+<a href = "https://rojo-jojo.github.io/2022/10/07/1.-Building-a-tweet-classification-model.html"> 1. Building a tweet classification model using NLP </a>
