@@ -85,7 +85,7 @@ BOW is an algorithm that we will implement on our documents in the corpus, that 
 
 <b>BOW Algorithm</b>
 
-1. Find all unqiue tokens in your corpus(words for us)
+1. Find all unqiue tokens(words in our case) in your corpus
 2. For each word get the count of occurrences of it
 3. Take every document and replace words in it with the count of occurrences calculated in step two (see bagofwords.py for my implementation from scratch)
 4. Pad all text vectors created from tweets to same length. Why? Because every feature vector going into the model should be of the same length.
