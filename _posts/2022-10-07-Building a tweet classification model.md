@@ -36,7 +36,7 @@ sequence. There are different methods of tokenizing the data which can affect th
 > Sentence tokenized form - ['Ml is over-rated', 'But it pays well']
 
 <br>
-[More on tokenization techniques](https://towardsdatascience.com/tokenization-for-natural-language-processing-a179a891bad4)<br>
+[More on tokenization techniques](https://towardsdatascience.com/tokenization-for-natural-language-processing-a179a891bad4)
 <br>
 [Implementing with NLTK in python](https://www.nltk.org/api/nltk.tokenize.html)
 <br>
@@ -48,7 +48,7 @@ In a nutshell the goal of both of these techniques is to reduce a devirational w
 <br>
 > Stemming: car, cars, car's, cars' --> ca
 
-<br><br>
+<br>
 <a href="https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html">More on lemmatization and stemming </a>
 <br><br>
 I am not trying that stemming thing. That shit looks unstable to me. I don't know how it even works. I'll just try lemmatization and check if it is adding any real value<br>
@@ -56,7 +56,6 @@ We will not discuss removing spaces, special characters etc, as they are self ex
 Let's move on to representation.
 
 # Data Representation
-<br>
 **What is data respresentation and why we need it?**
 <br>
 A machine learning model is a mathematical function i.e. it takes a vector of inputs, does some computations and gives a value as output. Since we mentioned mathematical, we have to understand that the input our algorithm will accept only numerical values. How does that work?
@@ -67,7 +66,7 @@ We perform an operation on the text to convert it to numeric. Below is math like
 ***T** is a text. **f** is an operation we apply on **T** which results in **N**,a numeric type or to simplify a number.*
 <br><br>
 You might ask what exactly is this f and what is it doing. If you ever come across names like bag of words, tfidf, word embeddings, then know that you are looking at an "f". They convert text to numeric form but what's special about them is that make meaningful conversions. You can also refer this process of applying a function f as *encoding* the text to numeric.
-<br><br>
+<br>
 > If you are familar with label encoding from feature engineering in ML then the concept here is similar.
 
 <br><br>
@@ -76,11 +75,10 @@ Some definitions before we move on to Bag Of Words<br>
 - Document: A document is an individual peice of text on which you want to do an ML operation. Think of a document as similar to a row in tabular data. It represents a single record.
 
 - Corpus: A corpus is the collection of all documents (document is to corpus what row is to a table)
-
 <br>
 
 ## Bag Of Words
-<br>
+
 BOW is an algorithm that we will implement on our documents in the corpus, that converts the document to a document vector. A document vector is a numeric vector representation of a document in a corpus. Our implementation of BOW will make the concept of document vector clearer.<br>
 
 <b>BOW Algorithm</b>
