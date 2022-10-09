@@ -89,3 +89,7 @@ BOW is an algorithm that we will implement on our documents in the corpus, that 
 3. Take every document and replace words in it with the count of occurrences calculated in step two (see bagofwords.py for my implementation from scratch)
 4. Pad all text vectors created from tweets to same length. Why? Because every feature vector going into the model should be of the same length.
 
+# Model training
+
+For model training we will start with sklearn models. I have created a <a href="https://github.com/rojo-jojo/class-monitor/blob/main/build_model/train_model.py">train_model.py</a> to log metrics and hyperparameters for the models that I would be experimenting with. This is the <a href="https://github.com/rojo-jojo/class-monitor/blob/main/logs/model_training_logs.jsonl">log file</a>. With very basic feature engineering and a random forest model we are getting poor model performance of f1=0.25 and auc=0.57
+
