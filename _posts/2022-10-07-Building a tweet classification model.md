@@ -92,5 +92,7 @@ BOW is an algorithm that we will implement on our documents in the corpus, that 
 
 # Model training
 
-For model training we will start with sklearn models. I have created a <a href="https://github.com/rojo-jojo/class-monitor/blob/main/build_model/train_model.py">train_model.py</a> to log metrics and hyperparameters for the models that I would be experimenting with. This is the <a href="https://github.com/rojo-jojo/class-monitor/blob/main/logs/model_training_logs.jsonl">log file</a>. With very basic feature engineering and a random forest model we are getting poor model performance of f1=0.25 and auc=0.57
+For model training we will start with sklearn models. I have created a <a href="https://github.com/rojo-jojo/class-monitor/blob/main/build_model/train_model.py">train_model.py</a> to log metrics and hyperparameters for the models that I would be experimenting with. This is the <a href="https://github.com/rojo-jojo/class-monitor/blob/main/logs/model_training_logs.jsonl">log file</a>. With very basic feature engineering and a random forest model we are getting poor model performance of f1=0.25 and auc=0.57. I was expecting the initial results to be bad but this is just shit. 
+<br><br>
+I'll tackle this model performance issue in another post
 
