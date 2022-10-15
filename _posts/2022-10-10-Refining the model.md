@@ -1,5 +1,5 @@
 Previous post - <a href="https://rojo-jojo.github.io/2022/10/07/Building-a-tweet-classification-model.html">Building a tweet classification model</a>
-<br>
+<br><br>
 If you are following this project series then we saw in the previous post that the first iteration of my model performed poorly. How can we make it better?
 <br><br>
 So my first throught was that there is some problem with the size of my corpus. This was my feature creation process -
@@ -23,7 +23,7 @@ I took the whole corpus and calculated occurrence of each word. <i> Then I went 
 - All other positions will get a default value like 0 or -1</u>
 <br>
 
-For beginner an example could help. You can google bag of words and find detailed explainations.
+For beginner an example could help in correctly visualise BOW steps. You can google bag of words and find good detailed explainations.
 <br>
 
 After correctly implementing my BOW algorithm I realised that there was no need to make all vectors of same length. If correctly implemented BOW will make all tweet vectors of same length. So I went ahead and trained my model again. The classifier specs remain same as before i.e. it is a sklearn RandomForestClassifier with n_estimators=500 and there are my results now
@@ -36,4 +36,4 @@ It is a MAJOR improvement for me. Though we know that these results are far from
 1. create a REST API to serve our model's prediction
 2. create a front-end to interact with our model
 
-If you are a data science enthusiast and especially someone into NLP, you can just fork my repo and try to upgrade the model. The only constraint is that for now you cannot use deep learning architectures like tensorflow, keras, PyTorch etc because I am going to host this model on a cloud and the DL model serving cost might become a big expense later. So ML based enhancements are welcome and there are many other word representations to try. Text me on linkedIn if you want to contribute.
+If you are a data science enthusiast and especially someone into NLP, you can just fork my repo and try to upgrade the model. The only constraint is that for now you cannot use deep learning architectures like tensorflow, keras, PyTorch etc because I am going to host this model on a cloud and the DL model serving cost might become a big expense later. So ML based enhancements are welcome and there are many other word representations to try. Reach out to me before contributing to the project git.
