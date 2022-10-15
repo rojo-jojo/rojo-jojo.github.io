@@ -19,8 +19,8 @@ I took the whole corpus and calculated occurrence of each word. <i> Then I went 
 <b>The right way</b>
 <br>
 - Keep an array of counts for all unique words in the corpus Suppose if there are 1000 unique words in your data then your array of counts would be of length 1000. 
-- *For each tweet there will be a copy of this array of counts. For the words existing in the tweet the array of counts will keep the count value of those words. 
-- All other positions will get a default value like 0 or -1*
+- </u>For each tweet there will be a copy of this array of counts. For the words existing in the tweet the array of counts will keep the count value of those words. 
+- All other positions will get a default value like 0 or -1</u>
 <br>
 
 For beginner an example could help. You can google bag of words and find detailed explainations.
