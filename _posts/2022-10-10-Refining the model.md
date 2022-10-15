@@ -11,19 +11,21 @@ So my first throught was that there is some problem with the size of my corpus. 
 
 <br>
 I trained my model and saw that my AUC was 0.57. This was worse than what I was expecting. Those of are familiar with NLP would see that I tried to implement a Bag of words(BOW) represention to create text to numeric vectors. But someone well versed in BOW and looking closely into my steps could easily find a major flaw of in my implementation of BOW. Here it is
-<br>
+<br><br>
 <b>What I did</b>
 <br>
 I took the whole corpus and calculated occurrence of each word. <i> Then I went to each tweet and replaced each word with it's count of occurences in the corpus</i>. This is where I went wrong.
-<br>
+<br><br>
 <b>The right way</b>
 <br>
 - Keep an array of counts for all unique words in the corpus Suppose if there are 1000 unique words in your data then your array of counts would be of length 1000. 
-- <i>For each tweet there will be a copy of this array of counts. For the words existing in the tweet the array of counts will keep the count value of those words. 
-- All other positions will get a default value like 0 or -1</i>
+- *For each tweet there will be a copy of this array of counts. For the words existing in the tweet the array of counts will keep the count value of those words. 
+- All other positions will get a default value like 0 or -1*
 <br>
+
 For beginner an example could help. You can google bag of words and find detailed explainations.
 <br>
+
 After correctly implementing my BOW algorithm I realised that there was no need to make all vectors of same length. If correctly implemented BOW will make all tweet vectors of same length. So I went ahead and trained my model again. The classifier specs remain same as before i.e. it is a sklearn RandomForestClassifier with n_estimators=500 and there are my results now
  - AUC: 0.65
  - f1 score: 0.44
