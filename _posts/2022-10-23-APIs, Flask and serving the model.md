@@ -1,7 +1,0 @@
-# APIs are everywhere
-<p>Not everywhere like your imaginary friend but they are everywhere in the tech world. Think of APIs as a way for your to open up your resources(data or methods) to other systems in a secure way.</p>
-
-Examples? 
-
-- Whenever you search something in Google, your searched text is passed from the front-end to the google search API. That API contacts the google server(backend) which does some computations and gives a response to the API which the Google webpage displays back to you
-- APIs don't have to be only in web applications. If you are familiar with pandas library in python then whenever you apply a pandas function to a dataset you are calling the pandas API
