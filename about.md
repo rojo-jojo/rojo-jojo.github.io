@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[email](mailto:rajat.joshi9994@gmail.com)
+
+[linkedIn](https://www.linkedin.com/in/rajat94joshi/)
+
+[twitter / X](https://x.com/rojojojo_)

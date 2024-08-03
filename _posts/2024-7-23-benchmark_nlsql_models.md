@@ -1,61 +1,51 @@
 ---
 layout: post
-title: Part 1 - Natural language to SQL with LLMs
+title: Part 2 - Benchmarks for NLSQL models
 ---
 
-## Introduction
-Natural language to SQL(NLSQL) is an application of NLP techniques to generate SQL queries that answer business questions. For example — I have two tables Logins and Users
+## Benchmark datasets
+To benchmark NLSQL models we require pairs of Natural language questions and the correct SQL query that answers the natural language question. There are few research initiative undertaking the massive task of creating these benchmark datasets. Three of the most popular among them are
 
-`Logins (login_date Datetime, userid Int)`
+1. [Spider 1.0](https://yale-lily.github.io/spider) — Huge collection with 200 databases and thousands of column. There is also a challenge associated with it as to who can get the best accuracy on the spider dataset. (Side note — most of my learnings on building SOTA NLSQL models comes from the research on the leaderboard on the spider benchmark
+2. [BIRD](https://bird-bench.github.io/) — 90+ databases with about 13k question answer pairs. Apparently they left “dirty” in their collection to mock the real world which they say is an advantage :)
+3. [KaggleDBQA](https://github.com/Chia-Hsuan-Lee/KaggleDBQA) — Widely used as a descent benchmark
 
-`Users (userid Int, first_name String, last_name String, active_flag Bool)`
+## Benchmark methodologies
+There are two common bench marking metrics for NLSQL models
 
-*Question* — Get names of all the users who logged on in the last 30 days
+1. Exact String match(ESM) — Compares whether two SQL queries have exactly same string representation
+2. Execution match(EX) — Compares whether two SQL queries have same output after execution. Two queries can have an execution match even if they don’t have a string match but the reverse is not true.
 
-```sql
-SELECT b.first_name + b.last_name AS name
-FROM Logins a
-LEFT JOIN Users b
-ON a.userid = b.userid
-WHERE DATEDIF(day, CURRENT_DATE(), login_date) <= 30;
-```
+## Limitations of benchmarking
 
-Assuming the query is correct for now, this is what we want our NLSQL model to achieve, but in much more complex scenarios. In summary we have three components
+### Ambiguity
+There are three types of ambiguity frequently observed in these benchmark datasets
 
-*Input*: A text of natural language question or statement (mostly asked by a non-technical user)
+1. DB schema ambiguity — NL queries are correct but there might be ambiguity in the schema of the DB, e.g. -there might be two columns with similar meaning and the LLM will not know which one to pick when required to answer your NL query
+2. DB values ambiguity — We don’t completely know what values are there in particular columns which leads to ambiguity, e.g. — NL Question — “Find all the order which are delivered in the last 90 days” — If there is a status column in a table we might want to put the filter status = "DELIVERED" but suppose in the table the status value for delivered orders is “CLOSED“ then we will have incorrect outcomes
+3. Ambiguous language in NL query — If the question is framed in an ambiguous manner then results can be incorrect and they cannot be completed attributed to the model, e.g. Question — Get a list of the most active users in the last one month. Here “most active” can have many definitions like 1) people who logged in most of the time, 2) people who stayed on the website longest, 3) who placed most orders etc.
 
-*Output*: A syntactically and logically correct SQL query
+### Exact string match
+The limitation of this benchmark metric is that there could be many ways an SQL query could be written and all of them are correct, e.g.
 
-*Process*: Our LLM based NLSQL model
+1. I can select my columns in different orders, it would fail string match because the select statement differs for the queries not
+2. There are many data transformations where self joins or window functions can be used in place of one another. Same goes for joins and where statements (If you do not have a data analytics background skip over this point)
+3. There might be different combinations of tables and columns which can retrieve the same transformed output data
 
-## Applications of NLSQL
+### Execution match
+It is generally considered a better metric than exact string match but not without its challenges -
 
-1. Provide capability to non technical users to interact with their data without bothering the data analysts and data engineers for everything. Example below
+1. When are two tables same? — If two table have values of all the columns exactly matching for each primary key then the are same. As long as we are adhering to this definition of match and ignoring mismatches because of ordering or rows and columns (unless explicitly asked for in the question) we are good to use this metric. It’s a good thought exercise to think of how you would build this checker?
 
-```
-Manager: Hey can you pull a list of top 10 users who made the most purchases on our platform last month
+### Annotator Consensus
+THE biggest problem with benchmarking — ***Experts cannot agree on what is a correct SQL query for a natural language question***
 
-Data Analyst: You can use the automatic query tool that Rajat built for us
+Stick that line to anyone who asks why your text to SQL model is not good enough according to [this paper](https://www.cidrdb.org/cidr2024/papers/p74-floratou.pdf) from CIDR2024 the consensus between human annotators is about 62%. So expect your model to perform around this accuracy unless some major breakthroughs in this area
 
-Manager: Nevermind, I can do it faster in excel
-```
+Next we start building out model and get into some coding…
 
-2. Making text to SQL bots part of your application — e.g. customer can ask queries about their past order on the Amazon app.
+**References**
 
-3. You are an executive who took VC money saying you will revolutionize data analytics with AI so you decide to lay off some of the data analysts in your team and replace them with this tool. An example
+[NLSQL is a solved problem…Not!](https://www.cidrdb.org/cidr2024/papers/p74-floratou.pdf)
 
-```
-VC backed CEO: What is the 3 months rolling average of sales for my company in the last 12 months
-
-Bot: cries in window functions
-```
-
-## Challenges
-1. **An LLM is NOT trained on your database** — Even LLMs built specifically for coding like code-llama, copilot etc do not out-of-the-box understand your database and what is the relationship between the entities in it
-2. **Complexity** — LinkedIn and Medium are filled with half baked articles on building text to sql with RAG. But the examples the shown are generally very pristine working cases. Many database schemas are not that well maintained. Many queries go beyond a simple join and aggregate which the text-to-SQL models fail really fast
-3. **Annotation**: This is the elephant in the room for all NLSQL solution. LLMs are not different than machine learning and deep learning models when it comes to affinity for quality data for its effective performance. With the current state of NLSQL framework there is no way you can achieve maximum accuracy in NLSQL without investing in annotating your schemas, tables and columns. This is a huge one time (sometimes recurring) human investment which organisations should consider before pursuing a NLSQL model
-
-## What Next?
-I’ll show in the upcoming articles on how to overcome all of these challenges and go to the edge of NL-SQL for a database. I have to cover a couple of fundamental concepts before we dive into the coding part of it.
-
-[Part 2 - Benchmarks for NLSQL models](2024-7-23-Part%201%20Natural%20Language%20to%20SQL.md/2024-7-23-benchmark_nlsql_models.md)
+[Spider](https://yale-lily.github.io/spider)
